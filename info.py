@@ -123,6 +123,9 @@ FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else 
 URL = "https://rgd-31x4.onrender.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "https://rgd-31x4.onrender.com/".format(FQDN, PORT)
 
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002114619001'))
+
+
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
 LOG_STR += ("P_TTI_SHOW_OFF found , Users will be redirected to send /start to Bot PM instead of sending file file directly\n" if P_TTI_SHOW_OFF else "P_TTI_SHOW_OFF is disabled files will be send in PM, instead of sending start.\n")
