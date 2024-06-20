@@ -12,7 +12,7 @@ from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from database.ia_filterdb import Media
 from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, PORT, BIN_CHANNEL, ON_HEROKU, SUPPORT_GROUP
+from info import SESSION, ADMINS, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, PORT, BIN_CHANNEL, ON_HEROKU, SUPPORT_GROUP
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from Script import script 
@@ -88,10 +88,7 @@ async def start():
     await idle()
     await SafariBot.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
     await self.send_message(chat_id=SUPPORT_GROUP, text=f"<b>ʀᴇsᴛᴀʀᴛᴇᴅ 🤖</b>")
-        tt = time.time() - st
-        seconds = int(datetime.timedelta(seconds=tt).seconds)
-        for admin in ADMINS:
-            await self.send_message(chat_id=admin, text=f"<b>✅ ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ\n🕥 ᴛɪᴍᴇ ᴛᴀᴋᴇɴ - <code> sᴇᴄᴏɴᴅs</code></b>")
+    await self.send_message(chat_id=admin, text=f"<b>✅ ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ\n🕥 ᴛɪᴍᴇ ᴛᴀᴋᴇɴ - <code> sᴇᴄᴏɴᴅs</code></b>")
     try:
         m = await SafariBot.send_message(chat_id=BIN_CHANNEL, text="Test")
         await m.delete()
