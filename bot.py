@@ -87,8 +87,8 @@ async def start():
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
     await SafariBot.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(today, time))
-    await self.send_message(chat_id=SUPPORT_GROUP, text=f"<b>ʀᴇsᴛᴀʀᴛᴇᴅ 🤖</b>")
-    await self.send_message(chat_id=admin, text=f"<b>✅ ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ\n🕥 ᴛɪᴍᴇ ᴛᴀᴋᴇɴ - <code> sᴇᴄᴏɴᴅs</code></b>")
+    await SafariBot.send_message(chat_id=SUPPORT_GROUP, text=f"<b>ʀᴇsᴛᴀʀᴛᴇᴅ 🤖</b>")
+    await SafariBot.send_message(chat_id=admin, text=f"<b>✅ ʙᴏᴛ ʀᴇsᴛᴀʀᴛᴇᴅ\n🕥 ᴛɪᴍᴇ ᴛᴀᴋᴇɴ - <code> sᴇᴄᴏɴᴅs</code></b>")
     try:
         m = await SafariBot.send_message(chat_id=BIN_CHANNEL, text="Test")
         await m.delete()
