@@ -55,6 +55,8 @@ FILES_DELETE = is_enabled((environ.get('FILES_DELETE', 'True')), False)
 # fill premium users id
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '7015329594').split()]
 
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1002047467726'))
+
 #stream link shortner
 STREAM_SITE = (environ.get('STREAM_SITE', 'urlshortx.com'))
 STREAM_API = (environ.get('STREAM_API', '8afa8fbc218cc0791c62495f2c510c92524503ce'))
