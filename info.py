@@ -65,7 +65,7 @@ STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/'))
 STREAM_LINK_MODE = is_enabled((environ.get('STREAM_LINK_MODE', "False")), False)
 
 # Others
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), True)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1845700490/3")
 VERIFY2_URL = environ.get('VERIFY2_URL', "ziplinker.net")
 VERIFY2_API = environ.get('VERIFY2_API', "e45148e36c775f7602b27f6036bcd96a750db1c8")
@@ -73,7 +73,7 @@ VERIFY2_API = environ.get('VERIFY2_API', "e45148e36c775f7602b27f6036bcd96a750db1
 # file Shortner urls
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'ziplinker.net')
 SHORTLINK_API = environ.get('SHORTLINK_API', 'e45148e36c775f7602b27f6036bcd96a750db1c8')
-IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'True')), True)
+IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
